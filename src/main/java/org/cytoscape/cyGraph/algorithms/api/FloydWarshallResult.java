@@ -16,19 +16,20 @@ import org.cytoscape.model.CyNode;
 public interface FloydWarshallResult {
 
 	/**
-	 * Checks whether the CyNetwork has negative cycles.
+	 * Returns True if the CyNetwork has negative cycles and False otherwise.
 	 * 
-	 * @return True if the CyNetwork has negative cycles and false otherwise.
+	 * @return True if the CyNetwork has negative cycles and False otherwise.
 	 */
 	public boolean hasNegativeCycle();
 
 	/**
-	 * Checks if there is a path from the source CyNode to the target CyNode.
+	 * Returns True if there is a path from the source CyNode to the target
+	 * CyNode and False otherwise.
 	 * 
 	 * @param target
 	 *            Target CyNode.
 	 * @return True if there is path from the source CyNode to the target CyNode
-	 *         and false otherwise.
+	 *         and False otherwise.
 	 */
 	public boolean hasPath(CyNode source, CyNode target);
 

@@ -7,9 +7,10 @@ import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
 
 /**
- * Graph Algorithms is the primary interface providing access to a number of
- * graph algorithms. These include breadth first search, depth first search,
- * Bellman-Ford, Dijkstra, Floyd-Warshall, Prim, Kruskal, Pagerank and HITS.
+ * <code>GraphAlgorithms</code> is the primary interface providing access to a
+ * number of graph algorithms. These include breadth first search, depth first
+ * search, Bellman-Ford, Dijkstra, Floyd-Warshall, Prim, Kruskal, Pagerank and
+ * HITS.
  * 
  * @author Jimmy
  * 
@@ -18,7 +19,7 @@ public interface GraphAlgorithms {
 
 	/**
 	 * Performs breadth first search on a CyNetwork starting from a given source
-	 * CyNode.
+	 * CyNode. Breadth first search is a graph search algorithm.
 	 * 
 	 * @param network
 	 *            CyNetwork containing the source node from which the user wants
@@ -31,13 +32,16 @@ public interface GraphAlgorithms {
 	 * @param callback
 	 *            Callback function
 	 * @return
+	 * @see <a href =
+	 *      "http://en.wikipedia.org/wiki/Breadth-first_search">Breadth First
+	 *      Search</a>
 	 */
 	public BfsResult breadthFirstSearch(CyNetwork network, CyNode source,
 			boolean directed, Callback callback);
 
 	/**
 	 * Performs depth first search on a CyNetwork starting from a given source
-	 * CyNode.
+	 * CyNode. Depth first search is a graph search algorithm.
 	 * 
 	 * @param network
 	 *            CyNetwork containing the source node from which the user wants
@@ -50,6 +54,8 @@ public interface GraphAlgorithms {
 	 * @param callback
 	 *            Callback function
 	 * @return
+	 * @see <a href = "http://en.wikipedia.org/wiki/Depth-first_search">Depth
+	 *      First Search</a>
 	 */
 	public DfsResult depthFirstSearch(CyNetwork network, CyNode source,
 			boolean directed, Callback callback);
@@ -66,6 +72,8 @@ public interface GraphAlgorithms {
 	 * @param function
 	 *            WeightFunction mapping each edge to a weight.
 	 * @return
+	 * @see <a href =
+	 *      "http://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">Floyd-Warshall</a>
 	 */
 	public FloydWarshallResult findAllPairShortestPath(CyNetwork network,
 			boolean directed, WeightFunction function);
@@ -78,6 +86,9 @@ public interface GraphAlgorithms {
 	 * @param function
 	 *            WeightFunction mapping each edge to a weight.
 	 * @return
+	 * @see <a href =
+	 *      "http://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal's
+	 *      algorithm</a>
 	 */
 	public MSTResult findKruskalTree(CyNetwork network, WeightFunction function);
 
@@ -95,6 +106,9 @@ public interface GraphAlgorithms {
 	 * @param function
 	 *            WeightFunction mapping each edge to a weight.
 	 * @return
+	 * @see <a href =
+	 *      "http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's
+	 *      algorithm</a>
 	 */
 	public DijkstraResult findPath(CyNetwork network, CyNode source,
 			boolean directed, WeightFunction function);
@@ -108,6 +122,8 @@ public interface GraphAlgorithms {
 	 * @param function
 	 *            WeightFunction mapping each edge to a weight.
 	 * @return
+	 * @see <a href = "http://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim's
+	 *      algorithm</a>
 	 */
 	public MSTResult findPrimTree(CyNetwork network, WeightFunction function);
 
@@ -126,6 +142,9 @@ public interface GraphAlgorithms {
 	 * @param function
 	 *            WeightFunction mapping each edge to a weight.
 	 * @return
+	 * @see <a href =
+	 *      "http://en.wikipedia.org/wiki/Bellman-Ford_algorithm">Bellman-Ford
+	 *      algorithm</a>
 	 */
 	public BellmanFordResult findShortestPath(CyNetwork network, CyNode source,
 			boolean directed, WeightFunction function);
@@ -141,6 +160,8 @@ public interface GraphAlgorithms {
 	 *            otherwise.
 	 * @return An instance of HITSResults that provides methods to access the
 	 *         hub and authority values of a node.
+	 * @see <a href = "http://en.wikipedia.org/wiki/HITS_algorithm">HITS
+	 *      algorithm</a>
 	 */
 	public HITSResults getHITSScores(CyNetwork network, boolean directed);
 
@@ -157,6 +178,8 @@ public interface GraphAlgorithms {
 	 *            otherwise.
 	 * @return An instance of PagerankResults that provides methods to access
 	 *         the pagerank score.
+	 * @see <a href = "http://en.wikipedia.org/wiki/PageRank">Pagerank
+	 *      algorithm</a>
 	 */
 	public PagerankResults getPageranks(CyNetwork network,
 			WeightFunction function, boolean directed);
@@ -181,6 +204,8 @@ public interface GraphAlgorithms {
 	 *            is 0.001.
 	 * @return An instance of PagerankResults that provides methods to access
 	 *         the pagerank score.
+	 * @see <a href = "http://en.wikipedia.org/wiki/PageRank">Pagerank
+	 *      algorithm</a>
 	 */
 	public PagerankResults getPageranks(CyNetwork network,
 			WeightFunction function, boolean directed, double probability,

@@ -22,7 +22,8 @@ public interface DfsResult {
 	public CyNode getSource();
 
 	/**
-	 * Checks if there is a path from the source CyNode to the target CyNode.
+	 * Returns True if there is a path from the source CyNode to the target
+	 * CyNode and False otherwise.
 	 * 
 	 * @param target
 	 *            Target CyNode.
@@ -32,7 +33,7 @@ public interface DfsResult {
 	public boolean hasPathTo(CyNode target);
 
 	/**
-	 * Returns the path from the source CyNode to the target CyNode as a
+	 * Returns the path From the source CyNode to the target CyNode as a
 	 * sequence of CyNodes.
 	 * 
 	 * @param target

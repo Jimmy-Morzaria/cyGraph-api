@@ -6,7 +6,7 @@ package org.cytoscape.cyGraph.algorithms.api;
 import org.cytoscape.model.CyEdge;
 
 /**
- * WeightFunction i.e. a map from CyEdge to weight, to be provided by the user when calling a path finder, minimum
+ * <code>WeightFunction</code> i.e. a map from CyEdge to weight, to be provided by the user when calling a path finder, minimum
  * spanning tree finder, etc.
  * 
  * @author Jimmy

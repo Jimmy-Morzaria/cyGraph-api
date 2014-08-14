@@ -31,7 +31,8 @@ public interface BfsResult {
 	public CyNode getSource();
 
 	/**
-	 * Checks if there is a path from the source CyNode to the target CyNode.
+	 * Returns True if there is a path from the source CyNode to the target
+	 * CyNode and false otherwise.
 	 * 
 	 * @param target
 	 *            Target CyNode.

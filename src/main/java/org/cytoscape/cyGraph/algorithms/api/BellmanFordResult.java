@@ -15,14 +15,14 @@ import org.cytoscape.model.CyNode;
 public interface BellmanFordResult {
 
 	/**
-	 * Checks whether the CyNetwork has negative cycles.
+	 * Returns True if the CyNetwork has negative cycles and false otherwise.
 	 * 
 	 * @return True if the CyNetwork has negative cycles and false otherwise.
 	 */
 	public boolean hasNegativeCycle();
 
 	/**
-	 * Checks if there is a path from the source CyNode to the target CyNode.
+	 * Returns true if there is a path from the source CyNode to the target CyNode and false otherwise.
 	 * 
 	 * @param target
 	 *            Target CyNode.

@@ -31,12 +31,13 @@ public interface DijkstraResult {
 	public CyNode getSource();
 
 	/**
-	 * Checks if there is a path from the source CyNode to the target CyNode.
+	 * Returns True if there is a path from the source CyNode to the target
+	 * CyNode and False otherwise.
 	 * 
 	 * @param target
 	 *            Target CyNode.
 	 * @return True if there is path from the source CyNode to the target CyNode
-	 *         and false otherwise.
+	 *         and False otherwise.
 	 */
 	public boolean hasPathTo(CyNode target);
 

@@ -6,7 +6,7 @@ package org.cytoscape.cyGraph.algorithms.api;
 import org.cytoscape.model.CyNode;
 
 /**
- * Callback function to be provided by the user.
+ * <code>Callback</code> function to be provided by the user.
  * 
  * @author Jimmy
  * 
